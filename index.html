@@ -12,7 +12,12 @@
                 super('intro');
             }
             create() {
-                this.add.text(10,10,"Click to begin.");
+                let box = this.add.text(10, 10,
+`Click to begin and click to continue through the slides.
+The first slide will naturally fade after 5 seconds
+so don't click on the first slide if you
+want to see the fade transition.`
+                );
                 this.input.on('pointerdown', () => this.scene.start('body'));
             }
         }
